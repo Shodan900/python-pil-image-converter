@@ -7,12 +7,10 @@ from PIL import Image
 # Instantiate TK root.
 root = Tk()
 
-# Open image, 
+# Open image, get pixels, set width and height.
 picture = input("Enter the file name of the image for processing:")
 im = Image.open(picture)
-# get pixels
 px = im.load()
-# set width and height
 width, height = im.size
 if width > 1024 or height > 1024:
 	print("Image too big! limit to 1024x1024")
